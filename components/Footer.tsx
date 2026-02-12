@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
 
           <div className="text-gray-500 text-sm">
-            Made with <span className="text-red-500">❤️</span> for Ramadan 2026
+            Made with <span className="text-red-500">❤️</span> by <span className="text-gold font-bold">MOHD SAIF</span>
           </div>
           
           <div className="mt-8 text-[10px] text-gray-700 uppercase tracking-[0.5em]">
