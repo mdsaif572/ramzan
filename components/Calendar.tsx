@@ -22,12 +22,13 @@ export default function Calendar() {
 
         <div className="w-full overflow-x-hidden">
           {/* Desktop Table Header */}
-          <div className="hidden lg:grid grid-cols-5 gap-6 px-10 py-5 mb-4 text-gold font-cinzel text-xs uppercase tracking-[0.25em] border-b border-gold/10 font-bold">
+          <div className="hidden lg:grid grid-cols-6 gap-6 px-10 py-5 mb-4 text-gold font-cinzel text-xs uppercase tracking-[0.25em] border-b border-gold/10 font-bold">
             <span>Ramadan</span>
             <span>Date</span>
             <span>Day</span>
             <span>Sehri (Ends)</span>
             <span>Iftar (Starts)</span>
+            <span>Duration</span>
           </div>
 
           <div className="space-y-4">
@@ -38,7 +39,7 @@ export default function Calendar() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.3, delay: (index % 10) * 0.03 }}
-                className="glass-card group relative flex flex-col lg:grid lg:grid-cols-5 lg:items-center gap-4 lg:gap-6 px-6 py-6 lg:px-10 rounded-2xl transition-all duration-500 hover:border-gold/40 hover:bg-gold/[0.03] border border-white/5"
+                className="glass-card group relative flex flex-col lg:grid lg:grid-cols-6 lg:items-center gap-4 lg:gap-6 px-6 py-6 lg:px-10 rounded-2xl transition-all duration-500 hover:border-gold/40 hover:bg-gold/[0.03] border border-white/5"
               >
                 {/* Ramadan Day */}
                 <div className="flex justify-between items-center lg:block">
@@ -89,6 +90,14 @@ export default function Calendar() {
                     <Sunset size={18} className="text-gold hidden lg:block" />
                     <span className="text-gold font-bold text-lg lg:text-base">{day.iftar}</span>
                   </div>
+                </div>
+
+                {/* Duration */}
+                <div className="flex justify-between items-center lg:block">
+                  <span className="text-gold text-[10px] font-cinzel lg:hidden uppercase tracking-widest opacity-60">Duration</span>
+                  <span className="text-gray-400 text-sm lg:text-base font-medium">
+                    {day.duration}
+                  </span>
                 </div>
 
                 {/* Retina Row Glow */}
