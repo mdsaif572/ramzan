@@ -33,13 +33,9 @@ export default function Calendar() {
 
           <div className="space-y-4">
             {ramadanData.map((day, index) => (
-              <motion.div
+              <div
                 key={day.ramadanDay}
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.3, delay: (index % 10) * 0.03 }}
-                className="glass-card group relative flex flex-col lg:grid lg:grid-cols-6 lg:items-center gap-4 lg:gap-6 px-6 py-6 lg:px-10 rounded-2xl transition-all duration-500 hover:border-gold/40 hover:bg-gold/[0.03] border border-white/5"
+                className="glass-card group relative flex flex-col lg:grid lg:grid-cols-6 lg:items-center gap-4 lg:gap-6 px-6 py-6 lg:px-10 rounded-2xl transition-all duration-300 hover:border-gold/40 hover:bg-gold/[0.03] border border-white/5"
               >
                 {/* Ramadan Day */}
                 <div className="flex justify-between items-center lg:block">
@@ -102,7 +98,7 @@ export default function Calendar() {
 
                 {/* Retina Row Glow */}
                 <div className="absolute inset-0 bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
