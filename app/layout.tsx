@@ -5,18 +5,21 @@ import "./globals.css";
 const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--font-cinzel",
+  display: "swap",
 });
 
 const amiri = Amiri({
   subsets: ["arabic"],
   weight: ["400", "700"],
   variable: "--font-amiri",
+  display: "swap",
 });
 
 const hindi = Noto_Sans_Devanagari({
   subsets: ["devanagari"],
   weight: ["400", "700"],
   variable: "--font-hindi",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

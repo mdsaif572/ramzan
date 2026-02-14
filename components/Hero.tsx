@@ -32,7 +32,7 @@ export default function Hero() {
               width: star.size,
               height: star.size,
               '--duration': star.duration,
-            } as any}
+            } as React.CSSProperties}
           />
         ))}
       </div>

@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic';
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Calendar from "@/components/Calendar";
-import Duas from "@/components/Duas";
-import Footer from "@/components/Footer";
-import BackToTop from "@/components/BackToTop";
+
+const Calendar = dynamic(() => import('@/components/Calendar'), { ssr: true });
+const Duas = dynamic(() => import('@/components/Duas'), { ssr: true });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: true });
+const BackToTop = dynamic(() => import('@/components/BackToTop'));
 
 export default function Home() {
   return (
