@@ -70,31 +70,22 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-20 text-center px-4 w-full max-w-screen-xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-gold text-sm sm:text-base md:text-xl lg:text-2xl font-cinzel mb-6 tracking-[0.3em] uppercase opacity-80"
-        >
+        <h2 className="text-gold text-sm sm:text-base md:text-xl lg:text-2xl font-cinzel mb-6 tracking-[0.3em] uppercase opacity-80 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           Ramadan 2026 Begins In
-        </motion.h2>
+        </h2>
 
         <div className="mb-12">
           <CountdownTimer targetDate="2026-02-18T00:00:00+05:30" />
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="mt-8 md:mt-16"
-        >
+        <div className="mt-8 md:mt-16 animate-in fade-in zoom-in duration-1000 delay-300">
           <h1 className="leading-tight font-bold font-cinzel text-white mb-4" style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)' }}>
             Ramadan <br className="sm:hidden" /> Calendar 2026
           </h1>
           <p className="text-gray-400 text-sm sm:text-base md:text-xl lg:text-2xl font-light tracking-wide max-w-2xl mx-auto">
             Prayagraj (Allahabad), Uttar Pradesh, India
           </p>
-        </motion.div>
+        </div>
       </div>
 
       {/* Smooth Scroll Indicator */}
