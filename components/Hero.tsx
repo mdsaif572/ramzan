@@ -8,7 +8,7 @@ export default function Hero() {
   const [stars, setStars] = useState<{ id: number; top: string; left: string; size: string; duration: string }[]>([]);
 
   useEffect(() => {
-    const generatedStars = Array.from({ length: 50 }).map((_, i) => ({
+    const generatedStars = Array.from({ length: 25 }).map((_, i) => ({
       id: i,
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
